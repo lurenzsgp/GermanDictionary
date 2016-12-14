@@ -1,0 +1,34 @@
+{
+    "solo" : {
+        "translation" : "nur",
+        "frequency" : 0
+    },
+    "lavorare" : {
+        "translation" : "arbeiten",
+        "frequency" : 0
+    },
+    "regalare" : {
+        "translation" : "schenken",
+        "frequency" : 0
+    },
+    "cappello" : {
+        "translation" : "der Hut",
+        "frequency" : 0
+    },
+    "bicicletta" : {
+        "translation" : "das Fahrrad - es",
+        "frequency" : 0
+    },
+    "collega" : {
+        "translation" : "der Kollege - en",
+        "frequency" : 0
+    },
+    "suggerire" : {
+        "translation" : "vorschlagen",
+        "frequency" : 0
+    },
+    "di più" : {
+        "translation" : "mehr",
+        "frequency" : 0
+    }
+}
