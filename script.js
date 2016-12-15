@@ -1,4 +1,6 @@
 var dictionary = {};
+var socket = io.connect();
+
 $(document).ready(function () {
     $.getJSON("vocabolary.json", function(data) {
         dictionary = data;
@@ -13,7 +15,7 @@ $(document).ready(function () {
     $('#addWord').click(newWord);
     $('#modalNewWord').on('shown.bs.modal', function () {
         $('#german-word').focus();
-    })
+    });
 
     $('#searchBar').keypress(function (e) {
         if (e.which == 13) {
@@ -43,6 +45,7 @@ function newWord () {
     clearInputText();
 
     refreshVocabolaryList();
+    socket.emit('client_data', {'message': dictionary});
 }
 
 function clearInputText() {
@@ -107,5 +110,9 @@ function updateFrequency() {
     var key = $($(this).children()[1]).text();
     dictionary[key].frequency ++;
 
+    clearInputText();
     refreshVocabolaryList();
+    $('#searchBar').focus();
+
+    socket.emit('client_data', {'message': dictionary});
 }
